@@ -85,6 +85,7 @@ cumulative_vaccinations = [
     10519729,
     10771998,
     11083652,
+    11422507,
     ]
 
 daily_inoculations = [100000]
@@ -94,7 +95,7 @@ for i, x in enumerate(cumulative_vaccinations):
         daily_inoculations.append(cumulative_vaccinations[i+1] - x)
 
 # daily_moving_average = moving_average(np.array(daily_inoculations), 7)
-dataframe = pd.DataFrame({'date': pd.date_range(start='1/12/2021', end='2/10/2021'), 'daily': daily_inoculations, 'cumulative': cumulative_vaccinations})
+dataframe = pd.DataFrame({'date': pd.date_range(start='1/12/2021', end='2/11/2021'), 'daily': daily_inoculations, 'cumulative': cumulative_vaccinations})
 dataframe.set_index('date', inplace=True)
 
 # daily_moving_average = moving_average(np.array(daily_inoculations), 7)
